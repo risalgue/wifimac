@@ -21,7 +21,7 @@
   <body>
  <!-- <div class="navbar-wrapper"> -->
  <!--  -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #535353;">
         <a class="navbar-brand text-white">WIFIMAC</a>
         <span class="navbar-text">
             <?php echo $this->session->userdata('user_name');?>
@@ -40,8 +40,11 @@
             <?php if ($this->session->userdata('roll_name')=='wifiadmins'){
               ?>
               <li class="nav-item active">
-              <a class="nav-link" href="<?php echo base_url('device/all_devices');?>">Buscar Dispositivo</a>
-            </li>
+                <a class="nav-link" href="<?php echo base_url('device/all_devices');?>">Buscar Dispositivo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url('device/stadistics');?>">Estadisticas</a>
+              </li>
             <?php 
                 }
               ?>
@@ -117,6 +120,7 @@
                 <th scope="col">#</th>
                 <th scope="col">Dispositivo</th>
                 <th scope="col">MAC</th>
+                <th scope="col">IP</th>
                 <th scope="col">Usuario</th>
                 <th scope="col">Insertado</th>
                 <th scope="col">Modificado</th>
@@ -138,6 +142,9 @@
                       </td>
                       <td>
                         <?php echo $row->device_mac; ?>
+                      </td>
+                      <td>
+                        <?php echo $row->device_ip; ?>
                       </td>
                       <td>
                         <?php echo $row->user_name; ?>

@@ -20,7 +20,7 @@
   </head>
   <body>
  <!-- <div class="navbar-wrapper"> -->
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2a52be;">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #535353;">
         <a class="navbar-brand text-white">WIFIMAC</a>
         <span class="navbar-text">
             <?php echo $this->session->userdata('user_name');?>
@@ -111,9 +111,13 @@
                 $cantTelefNo_doc = 0;
                 $cantTabletNo_doc = 0;
                 $cantLaptopNo_doc = 0;
+                $cantTelefOtros = 0;
+                $cantTabletOtros = 0;
+                $cantLaptopOtros = 0;
                 $totalEst = 0;
                 $totalProf = 0;
                 $totalNo_doc = 0;
+                $totalOtros = 0;
                 foreach ($all_data as $row){
                   if($row->roll_name == 'estudiantes' and $row->device_type == 'Movil') {
                     $cantTelefEst++;
@@ -142,6 +146,15 @@
                   else if ($row->roll_name == 'no_docente' and $row->device_type == 'Laptop') {
                     $cantLaptopNo_doc++;
                   }
+                  else if($row->device_type == 'Movil'){
+                    $cantTelefOtros++;
+                  }
+                  else if($row->device_type == 'Table'){
+                    $cantTabletOtros++;
+                  }
+                  else {
+                    $cantLaptopOtros++;
+                  }
                 }
                 foreach ($all_users as $row){
                   if ($row->roll_name == 'estudiantes') {
@@ -152,6 +165,9 @@
                   }
                   else if($row->roll_name == 'no_docente') {
                     $totalNo_doc;
+                  }
+                  else {
+                    $totalOtros++;
                   }
                 }
               ?>
@@ -217,22 +233,42 @@
               </tr>
               <tr>
                 <th scope="row">
+                  Otros
+                </th>
+                <td>
+                  <?php echo $cantTelefOtros; ?>
+                </td>
+                <td>
+                  <?php echo $cantTabletOtros; ?>
+                </td>
+                <td>
+                  <?php echo $cantLaptopOtros; ?>
+                </td>
+                <td>
+                  <?php echo $cantTelefOtros + $cantTabletOtros + $cantLaptopOtros; ?>
+                </td>
+                <td>
+                  <?php echo $totalOtros; ?>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
                   Total
                 </th>
                 <td>
-                  <?php echo $cantTelefEst + $cantTelefProf + $cantTelefNo_doc; ?>
+                  <?php echo $cantTelefEst + $cantTelefProf + $cantTelefNo_doc + $cantTelefOtros; ?>
                 </td>
                 <td>
-                  <?php echo $cantTabletEst + $cantTabletProf + $cantTabletNo_doc; ?>
+                  <?php echo $cantTabletEst + $cantTabletProf + $cantTabletNo_doc + $cantTabletOtros; ?>
                 </td>
                 <td>
-                  <?php echo $cantLaptopEst + $cantLaptopProf + $cantLaptopNo_doc; ?>
+                  <?php echo $cantLaptopEst + $cantLaptopProf + $cantLaptopNo_doc + $cantLaptopOtros; ?>
                 </td>
                 <td>
-                  <?php echo $all_data->c; ?>
+                  <?php echo count($all_data); ?>
                 </td>
                 <td>
-                  <?php echo $totalNo_doc; ?>
+                  <?php echo count($all_users); ?>
                 </td>
               </tr>
             </tbody>

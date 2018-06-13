@@ -20,7 +20,7 @@
   <body>
 
   <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2a52be;">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #535353;">
         <a class="navbar-brand text-white">WIFIMAC</a>
         <span class="navbar-text">
             <?php echo $this->session->userdata('user_name');?>

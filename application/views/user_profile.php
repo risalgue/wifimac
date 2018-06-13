@@ -21,7 +21,7 @@
   </head>
   <body>
  <!-- <div class="navbar-wrapper"> -->
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2a52be;">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #535353;">
         <a class="navbar-brand text-white">WIFIMAC</a>
         <span class="navbar-text">
             <?php echo $this->session->userdata('user_name');?>
@@ -68,11 +68,16 @@
           <div class="region region-preface-first">
             <div id="block-block-2" class="block block-block">
               <div class="content">
-                <i class="fa fa-gear fa-5x wow bounce animated fa-2x animated text-white align-content-center" style="visibility: visible; animation-duration: 2500ms; animation-iteration-count: infinite; animation-name: spin;" data-wow-iteration="infinite" data-wow-duration="2500ms "></i>
-                <h2 class="h2-preface text-white">Servicios de Soporte</h2>
-                <hr id="preface" style="background-color: #ffffff">
+                <i class="fa fa-gear fa-5x wow bounce animated fa-2x animated text-black align-content-center" style="visibility: visible; animation-duration: 2500ms; animation-iteration-count: infinite; animation-name: spin;color: #414141;" data-wow-iteration="infinite" data-wow-duration="2500ms "></i>
+                <h2 class="h2-preface text-black">Los Usuarios</h2>
+                <hr id="preface" style="background-color: #858585">
                 <div class="service-desc">
-                  <p class="text-white" style="margin-top: 15px;">Brindamos un completo soporte técnico para nuestra cartera de sistemas y productos desplegados.</p>
+                  <p class="text-black" style="margin-top: 15px;text">
+                    <br>a) Estudiantes tienen la posibilidad de registrar 1 equipo móvil.</br>
+                    <br> b) Trabajadores no docentes tienen la posibilidad de registrar 1 equipo móvil</br>
+                    <br> c) Docentes tienen la posibilidad de registrar 2 equipos móvil. </br>
+                    <br>Nota: por capacidad de la red inalámbrica..</br>
+                  </p>
                 </div>
               </div>
             </div>
@@ -84,12 +89,15 @@
               <div class="content">
                 <div class="service-box">
                   <div class="service-icon">
-                    <i class="fa fa-file-text fa-5x wow bounce animated fa-2x animated text-white" style="visibility: visible; animation-duration: 1500ms; animation-iteration-count: infinite; animation-name: bounce;" data-wow-iteration="infinite" data-wow-duration="1500ms "></i>
+                    <i class="fa fa-file-text fa-5x wow bounce animated fa-2x animated text-black" style="visibility: visible; animation-duration: 1500ms; animation-iteration-count: infinite; animation-name: bounce;color: #414141;" data-wow-iteration="infinite" data-wow-duration="1500ms "></i>
                   </div>
-                  <h2 class="h2-preface text-white">Servicios de Consultoría</h2>
-                  <hr id="preface" style="background-color: #ffffff">
+                  <h2 class="h2-preface text-black">Cantidad de Equipos</h2>
+                  <hr id="preface" style="background-color: #000000">
                   <div class="service-desc">
-                    <p class="text-white" style="margin-top: 15px;">Brindamos una completa asesoría en materia de las líneas de negocio en que se enfoca la empresa.</p>
+                    <p class="text-black" style="margin-top: 15px;">
+                      <br>La cantidad de equipos por tipología es: 1 Teléfono, 1 Tablet, 1 Laptop.</br>
+                      <br>Nota: En el caso de docentes no pueden repetir el tipo de equipo.</br>
+                    </p>
                   </div>
                 </div>
               </div>
