@@ -89,7 +89,7 @@
               <div class="content">
                 <div class="service-box">
                   <div class="service-icon">
-                    <i class="fa fa-file-text fa-5x wow bounce animated fa-2x animated text-black" style="visibility: visible; animation-duration: 1500ms; animation-iteration-count: infinite; animation-name: bounce;color: #414141;" data-wow-iteration="infinite" data-wow-duration="1500ms "></i>
+                    <i class="fa fa-laptop fa-5x wow bounce animated fa-2x animated text-black" style="visibility: visible; animation-duration: 1500ms; animation-iteration-count: infinite; animation-name: bounce;color: #414141;" data-wow-iteration="infinite" data-wow-duration="1500ms "></i>
                   </div>
                   <h2 class="h2-preface text-black">Cantidad de Equipos</h2>
                   <hr id="preface" style="background-color: #000000">
